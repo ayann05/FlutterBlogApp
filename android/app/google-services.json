@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "197314007442",
+    "firebase_url": "https://blog-app-6da42-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "blog-app-6da42",
+    "storage_bucket": "blog-app-6da42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197314007442:android:2bd6d72e163604ccc3b14b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_blogapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197314007442-rfgis4v9c2g670fei3j0l8947tuoi44t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_blogapp",
+            "certificate_hash": "e6b4878dd60f7dc69070b796bc444619f4617545"
+          }
+        },
+        {
+          "client_id": "197314007442-9mcv4nhs9cg24poj9agmn5pnism93lnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIgzQ1yl5d_sMm617KtuvNbeCC7bH4lYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197314007442-9mcv4nhs9cg24poj9agmn5pnism93lnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

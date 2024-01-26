@@ -1,0 +1,183 @@
+/*
+
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class HomeContent extends StatefulWidget {
+  const HomeContent({super.key});
+
+  @override
+  State<HomeContent> createState() => _HomeContentState();
+}
+
+class _HomeContentState extends State<HomeContent> {
+  final databaseRef = FirebaseDatabase.instance.reference().child('Posts');
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(CupertinoIcons.back),
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Text(
+          "Your Blog Content",
+          style: TextStyle(fontSize: 16, color: Colors.black),
+        ),
+        actions: [
+          InkWell(
+            onTap: () {},
+            child: Icon(
+              CupertinoIcons.search,
+              color: Colors.black,
+            ),
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+        ],
+      ),
+      body: Container(
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 15,
+            ),
+            Expanded(
+              child: FirebaseAnimatedList(
+                query: databaseRef.child('Post List'),
+                itemBuilder: (BuildContext context, DataSnapshot snapshot,
+                    Animation<double> animation, int index) {
+                  if (snapshot.value == null) {
+                    return const CircularProgressIndicator();
+                  } else {
+                    final data = snapshot.value as Map<dynamic, dynamic>;
+                    return Card(
+                      elevation: 5, // Add elevation for a shadow effect
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      margin: const EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          FadeInImage.assetNetwork(
+                            placeholder: 'assets/errorImage.png',
+                            image: data['postImage'],
+                            height: 100,
+                            width: 100,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              data['postTitle'],
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              data['postDescription'],
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(12.0),
+                            child: Divider(
+                              thickness: 0.1,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                IconButton(
+                                  icon: Icon(Icons.favorite),
+                                  onPressed: () {
+                                    // Handle favorite button press
+                                  },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+main part of the code
+*/
+
+
+
+
+
+
+
+/*
+
+removed prt old UI
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 15,
+            ),
+            Expanded(
+              child: FirebaseAnimatedList(
+                  query: databaseRef.child('Post List'),
+                  itemBuilder: (BuildContext context, DataSnapshot snapshot,
+                      Animation<double> animation, int index) {
+                    if (snapshot.value == null) {
+                      return const CircularProgressIndicator();
+                    } else {
+                      final data = snapshot.value as Map<dynamic, dynamic>;
+                      return Column(
+                        children: [
+                          FadeInImage.assetNetwork(
+                            placeholder: 'assets/errorImage.png',
+                            image: data['postImage'],
+                            height: 100,
+                            width: 100,
+                          ),
+                          Text(
+                            data['postTitle'],
+                            style: TextStyle(fontSize: 16, color: Colors.black),
+                          ),
+                          Text(
+                            data['postDescription'],
+                            style: TextStyle(fontSize: 14, color: Colors.black),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(12.0),
+                            child: Divider(
+                              thickness: 0.1,
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                  }),
+            )
+          ],
+        ),
+
+*/
